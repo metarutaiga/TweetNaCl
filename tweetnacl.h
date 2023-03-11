@@ -1,23 +1,5 @@
 #ifndef TWEETNACL_H
 #define TWEETNACL_H
-#define crypto_auth_PRIMITIVE "hmacsha512256"
-#define crypto_auth crypto_auth_hmacsha512256
-#define crypto_auth_verify crypto_auth_hmacsha512256_verify
-#define crypto_auth_BYTES crypto_auth_hmacsha512256_BYTES
-#define crypto_auth_KEYBYTES crypto_auth_hmacsha512256_KEYBYTES
-#define crypto_auth_IMPLEMENTATION crypto_auth_hmacsha512256_IMPLEMENTATION
-#define crypto_auth_VERSION crypto_auth_hmacsha512256_VERSION
-#define crypto_auth_hmacsha512256_tweet_BYTES 32
-#define crypto_auth_hmacsha512256_tweet_KEYBYTES 32
-extern int crypto_auth_hmacsha512256_tweet(unsigned char *,const unsigned char *,unsigned long long,const unsigned char *);
-extern int crypto_auth_hmacsha512256_tweet_verify(const unsigned char *,const unsigned char *,unsigned long long,const unsigned char *);
-#define crypto_auth_hmacsha512256_tweet_VERSION "-"
-#define crypto_auth_hmacsha512256 crypto_auth_hmacsha512256_tweet
-#define crypto_auth_hmacsha512256_verify crypto_auth_hmacsha512256_tweet_verify
-#define crypto_auth_hmacsha512256_BYTES crypto_auth_hmacsha512256_tweet_BYTES
-#define crypto_auth_hmacsha512256_KEYBYTES crypto_auth_hmacsha512256_tweet_KEYBYTES
-#define crypto_auth_hmacsha512256_VERSION crypto_auth_hmacsha512256_tweet_VERSION
-#define crypto_auth_hmacsha512256_IMPLEMENTATION "crypto_auth/hmacsha512256/tweet"
 #define crypto_box_PRIMITIVE "curve25519xsalsa20poly1305"
 #define crypto_box crypto_box_curve25519xsalsa20poly1305
 #define crypto_box_open crypto_box_curve25519xsalsa20poly1305_open
@@ -109,15 +91,6 @@ extern int crypto_hashblocks_sha512_tweet(unsigned char *,const unsigned char *,
 #define crypto_hashblocks_sha512_BLOCKBYTES crypto_hashblocks_sha512_tweet_BLOCKBYTES
 #define crypto_hashblocks_sha512_VERSION crypto_hashblocks_sha512_tweet_VERSION
 #define crypto_hashblocks_sha512_IMPLEMENTATION "crypto_hashblocks/sha512/tweet"
-#define crypto_hashblocks_sha256_tweet_STATEBYTES 32
-#define crypto_hashblocks_sha256_tweet_BLOCKBYTES 64
-extern int crypto_hashblocks_sha256_tweet(unsigned char *,const unsigned char *,unsigned long long);
-#define crypto_hashblocks_sha256_tweet_VERSION "-"
-#define crypto_hashblocks_sha256 crypto_hashblocks_sha256_tweet
-#define crypto_hashblocks_sha256_STATEBYTES crypto_hashblocks_sha256_tweet_STATEBYTES
-#define crypto_hashblocks_sha256_BLOCKBYTES crypto_hashblocks_sha256_tweet_BLOCKBYTES
-#define crypto_hashblocks_sha256_VERSION crypto_hashblocks_sha256_tweet_VERSION
-#define crypto_hashblocks_sha256_IMPLEMENTATION "crypto_hashblocks/sha256/tweet"
 #define crypto_hash_PRIMITIVE "sha512"
 #define crypto_hash crypto_hash_sha512
 #define crypto_hash_BYTES crypto_hash_sha512_BYTES
@@ -130,13 +103,6 @@ extern int crypto_hash_sha512_tweet(unsigned char *,const unsigned char *,unsign
 #define crypto_hash_sha512_BYTES crypto_hash_sha512_tweet_BYTES
 #define crypto_hash_sha512_VERSION crypto_hash_sha512_tweet_VERSION
 #define crypto_hash_sha512_IMPLEMENTATION "crypto_hash/sha512/tweet"
-#define crypto_hash_sha256_tweet_BYTES 32
-extern int crypto_hash_sha256_tweet(unsigned char *,const unsigned char *,unsigned long long);
-#define crypto_hash_sha256_tweet_VERSION "-"
-#define crypto_hash_sha256 crypto_hash_sha256_tweet
-#define crypto_hash_sha256_BYTES crypto_hash_sha256_tweet_BYTES
-#define crypto_hash_sha256_VERSION crypto_hash_sha256_tweet_VERSION
-#define crypto_hash_sha256_IMPLEMENTATION "crypto_hash/sha256/tweet"
 #define crypto_onetimeauth_PRIMITIVE "poly1305"
 #define crypto_onetimeauth crypto_onetimeauth_poly1305
 #define crypto_onetimeauth_verify crypto_onetimeauth_poly1305_verify

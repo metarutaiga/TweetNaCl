@@ -2,12 +2,11 @@ print '#ifndef TWEETNACL_H'
 print '#define TWEETNACL_H'
 
 for z in [
-'auth:hmacsha512256/32/32:BYTES,KEYBYTES:,_verify:qpup,ppup',
 'box:curve25519xsalsa20poly1305/32/32/32/24/32/16:PUBLICKEYBYTES,SECRETKEYBYTES,BEFORENMBYTES,NONCEBYTES,ZEROBYTES,BOXZEROBYTES:'
 + ',_open,_keypair,_beforenm,_afternm,_open_afternm:qpuppp,qpuppp,qq,qpp,qpupp,qpupp',
 'core:salsa20/64/16/32/16,hsalsa20/32/16/32/16:OUTPUTBYTES,INPUTBYTES,KEYBYTES,CONSTBYTES::qppp',
-'hashblocks:sha512/64/128,sha256/32/64:STATEBYTES,BLOCKBYTES::qpu',
-'hash:sha512/64,sha256/32:BYTES::qpu',
+'hashblocks:sha512/64/128:STATEBYTES,BLOCKBYTES::qpu',
+'hash:sha512/64:BYTES::qpu',
 'onetimeauth:poly1305/16/32:BYTES,KEYBYTES:,_verify:qpup,ppup',
 'scalarmult:curve25519/32/32:BYTES,SCALARBYTES:,_base:qpp,qp',
 'secretbox:xsalsa20poly1305/32/24/32/16:KEYBYTES,NONCEBYTES,ZEROBYTES,BOXZEROBYTES:,_open:qpupp,qpupp',
