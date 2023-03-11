@@ -282,7 +282,7 @@ sv car25519(gf o)
   }
 }
 
-sv sel25519(gf p,gf q,int b)
+sv sel25519(gf p,gf q,i64 b)
 {
   i64 t,i,c=~(b-1);
   FOR(i,16) {
@@ -545,7 +545,7 @@ int crypto_hashblocks(u8 *x,const u8 *m,u64 n)
 
   FOR(i,8) ts64(x+8*i,z[i]);
 
-  return n;
+  return 0;
 }
 
 static const u8 iv[64] = {
